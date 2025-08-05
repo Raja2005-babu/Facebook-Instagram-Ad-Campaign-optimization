@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ad Campaign Optimization Records</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:cyan; }
+    .container { background: #fff; padding: 24px; margin: 40px auto; width: 680px; border-radius: 8px; box-shadow: 0 2px 8px #cef; }
+    h1 { color: red; }
+    table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+    th, td { border: 1px solid #e0e5ec; padding: 10px; text-align: left; }
+    th { background: blue; color: white; }
+    .add-btn { background: #e4f0fb; color: #224590; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-top: 16px; }
+    input[type="text"], input[type="number"] { width: 98%; padding: 4px; border: 1px solid #dfe3eb; border-radius: 4px; }
+  </style>
+  <script>
+    function addAdRow() {
+      var table = document.getElementById('adTable').getElementsByTagName('tbody')[0];
+      var row = table.insertRow(-1);
+
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      var cell5 = row.insertCell(4);
+      var cell6 = row.insertCell(5);
+
+      cell1.innerHTML = '<input type="text" placeholder="e.g. 18-25, Tech">';
+      cell2.innerHTML = '<input type="text" placeholder="Image/Video">';
+      cell3.innerHTML = '<input type="number" min="0" max="100" step="0.01" placeholder="CTR %">';
+      cell4.innerHTML = '<input type="number" min="0" step="0.01" placeholder="CPM">';
+      cell5.innerHTML = '<input type="number" min="0" step="0.01" placeholder="CPC">';
+      cell6.innerHTML = '<input type="number" min="0" max="100" step="0.01" placeholder="Conv. Rate %">';
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1><u>Facebook/Instagram Ad Campaign Optimization</u></h1>
+    <button class="add-btn" onclick="addAdRow()">+ Add New Record</button>
+    <table id="adTable">
+      <thead>
+        <tr>
+          <th>Audience</th>
+          <th>Ad Type</th>
+          <th>CTR (%)</th>
+          <th>CPM</th>
+          <th>CPC</th>
+          <th>Conversion Rate (%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- New campaign performance records will appear here -->
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
